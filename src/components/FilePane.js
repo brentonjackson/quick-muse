@@ -23,9 +23,6 @@ function FilePane() {
       reader.onload = (function (file) {
         return function () {
           setInstruments([...instruments, fileArr[i].name]);
-          console.log("added to list");
-
-          console.log(instruments);
         };
       })(fileArr);
 

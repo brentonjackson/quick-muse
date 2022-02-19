@@ -3,7 +3,7 @@ function FileList({ files }) {
     <div id="file-list">
       {files.map((file, i) => {
         return (
-          <div key={i}>
+          <div id="instrument-track" key={i}>
             <span>{file}</span>
             <br></br>
           </div>
