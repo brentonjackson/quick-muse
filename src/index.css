@@ -1,13 +1,86 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root,
+#parent {
+  height: 100vh;
+  width: 100vw;
+}
+
+#button-overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 80%;
+  width: 80%;
+  z-index: 999;
+}
+
+#export-button {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 10px;
+}
+
+#player-control-wrapper {
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  border: 5px yellow solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  width: 100%;
+}
+#player-controls {
+  border: 5px yellow solid;
+}
+
+#music-canvas {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 80%;
+  width: 80%;
+  background: purple;
+}
+
+#file-pane {
+  background: blue;
+  width: 20%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#file-pane .hidden {
+  display: none;
+}
+
+#import-button {
+  margin: 10px;
+}
+
+#file-list {
+  box-sizing: border-box;
+  border: 5px yellow solid;
+  width: 90%;
+  height: auto;
+  padding: 10px 0;
+}
+
+#track-editor {
+  height: 100%;
+  width: 100%;
+  background: orange;
+  position: absolute;
 }
