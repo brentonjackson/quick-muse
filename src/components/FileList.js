@@ -1,10 +1,13 @@
 function FileList({ files }) {
   return (
     <div id="file-list">
-      {files.map((file, i) => {
+      {files.map((track, i) => {
         return (
           <div id="instrument-track" key={i}>
-            <span>{file}</span>
+            <span>{track.fileName}</span>
+            <audio controls>
+              <source src={track.instrument} />
+            </audio>
             <br></br>
           </div>
         );

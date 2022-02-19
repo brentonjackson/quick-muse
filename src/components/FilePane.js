@@ -2,16 +2,12 @@ import FileList from "./FileList";
 import { useState } from "react";
 
 function FilePane() {
-  const [instruments, setInstruments] = useState([]);
+  const [instrumentList, setInstrumentList] = useState([]);
 
   function fileSelectHandler(e) {
-    console.log("loading file");
     let files = e.target.files;
     let fileArr = Array.from(files);
-    console.log(fileArr);
     for (let i = 0; i < fileArr.length; i++) {
-      console.log(fileArr[i].type);
-
       // Only process image files.
       if (!fileArr[i].type.match("audio.*")) {
         console.log("not right file type");
@@ -19,14 +15,19 @@ function FilePane() {
       }
 
       let reader = new FileReader();
-
-      reader.onload = (function (file) {
-        return function () {
-          setInstruments([...instruments, fileArr[i].name]);
+      reader.onloadend = (function (file) {
+        return function (e) {
+          setInstrumentList([
+            ...instrumentList,
+            {
+              fileName: fileArr[i].name,
+              instrument: e.target.result,
+            },
+          ]);
         };
       })(fileArr);
 
-      reader.readAsText(fileArr[i]);
+      reader.readAsDataURL(fileArr[i]);
     }
   }
 
@@ -37,7 +38,6 @@ function FilePane() {
         id="files"
         name="file"
         className="hidden"
-        multiple
         onChange={fileSelectHandler}
       />
       <button id="import-button">
@@ -46,7 +46,7 @@ function FilePane() {
       Files
       <br></br>
       <br></br>
-      <FileList files={instruments} />
+      <FileList files={instrumentList} />
     </div>
   );
 }
