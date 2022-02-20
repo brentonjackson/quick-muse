@@ -5,12 +5,7 @@ function PlayerControls() {
     <div id="player-control-wrapper">
       <div id="player-controls">
         <button id="rewind">Rewind</button>
-        <button
-          id={isPaused ? "play" : "pause"}
-          onClick={() => {
-            setIsPaused(!isPaused);
-          }}
-        >
+        <button id={isPaused ? "play" : "pause"} onClick={playAudio}>
           {isPaused ? "Play" : "Pause"}
         </button>
         <button id="fast-forward">Fast Forward</button>
