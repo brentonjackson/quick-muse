@@ -18,6 +18,15 @@ body {
   position: fixed;
 }
 
+#parent {
+  background: linear-gradient(to top, #4a00e0, #8e2de2);
+  background: -webkit-linear-gradient(
+    to top,
+    #4a00e0,
+    #8e2de2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+}
+
 #button-overlay {
   position: absolute;
   right: 0;
@@ -78,23 +87,12 @@ body {
 }
 
 #music-canvas {
-  z-index: -9999;
+  z-index: 1;
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
   width: 100%;
-  background: #8e2de2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #4a00e0,
-    #8e2de2
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #4a00e0,
-    #8e2de2
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #file-pane-old {

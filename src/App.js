@@ -22,7 +22,7 @@ function App() {
         setSelected={setSelectedTrack}
         selected={selectedTrack}
       />
-      <MusicCanvas />
+      <MusicCanvas selectedTrack={selectedTrack} />
       <TrackEditor />
     </div>
   );
