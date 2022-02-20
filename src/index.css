@@ -49,10 +49,32 @@ body {
 #player-controls {
   justify-content: space-between;
   display: flex;
-  width: 45%;
+  width: 30%;
 }
-#player-controls button {
-  border-radius: 50%;
+
+#rewind-button {
+  background: url("../public/Rewind-595b40b75ba036ed117d8432.svg");
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+#fast-forward-button {
+  background: url("../public/Fast\ Forward-595b40b75ba036ed117d7d6a.svg");
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+#play-button {
+  background: url("../public/Play-595b40b75ba036ed117d8316.svg");
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+#pause-button {
+  background: url("../public/Pause-595b40b75ba036ed117d82c0.svg");
+  height: 50px;
+  width: 50px;
+  display: block;
 }
 
 #music-canvas {
