@@ -78,7 +78,7 @@ body {
   padding: 10px 0;
 }
 
-#instrument-track {
+.instrument-track {
   padding: 10px 0;
   border: 5px orange solid;
 }
@@ -88,4 +88,9 @@ body {
   width: 100%;
   background: orange;
   position: absolute;
+}
+
+#soundbar {
+  width: 0;
+  height: 0;
 }

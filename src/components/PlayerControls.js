@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 function PlayerControls() {
   const [isPaused, setIsPaused] = useState(true);
   return (
