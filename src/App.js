@@ -5,7 +5,12 @@ import TrackEditor from "./components/TrackEditor";
 import { useState } from "react";
 
 function App() {
-  const [selectedTrack, setSelectedTrack] = useState();
+  const [selectedTrack, setSelectedTrack] = useState("");
+
+  function playAudio() {
+    let audioObjects = document.querySelectorAll(".soundbar");
+    let playBtn = document.querySelector("#play-button");
+  }
 
   return (
     <div id="parent">

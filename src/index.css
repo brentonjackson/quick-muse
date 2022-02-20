@@ -76,11 +76,24 @@ body {
   width: 90%;
   height: auto;
   padding: 10px 0;
+  overflow-y: scroll;
+}
+
+.soundbar {
+  width: 0;
+  height: 0;
 }
 
 .instrument-track {
   padding: 10px 0;
   border: 5px orange solid;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#delete-button {
+  display: hidden;
 }
 
 #track-editor {
@@ -88,9 +101,4 @@ body {
   width: 100%;
   background: orange;
   position: absolute;
-}
-
-#soundbar {
-  width: 0;
-  height: 0;
 }
