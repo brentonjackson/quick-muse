@@ -1,5 +1,5 @@
 function MusicCanvas() {
-  return <div id="music-canvas"></div>;
+  return <div id="waveform"></div>;
 }
 
 export default MusicCanvas;

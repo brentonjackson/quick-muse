@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 function PlayerControls() {
-  function playAudio() {
-    return 0;
-  }
   const [isPaused, setIsPaused] = useState(true);
+  function playAudio() {
+    console.log(isPaused);
+    setIsPaused(!isPaused);
+  }
   return (
     <div id="player-control-wrapper">
       <div id="player-controls">

@@ -44,7 +44,7 @@ body {
   border: 5px yellow solid;
 }
 
-#music-canvas {
+#waveform {
   position: absolute;
   right: 0;
   top: 0;
