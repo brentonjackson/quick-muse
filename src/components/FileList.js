@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function FileList({ files, removeInstrument }) {
+function FileList({ files, removeInstrument, pass }) {
   const [isDeleteActive, setIsDeleteActive] = useState(false);
   const [deleteKey, setDeleteKey] = useState(null);
 
@@ -33,7 +33,14 @@ function FileList({ files, removeInstrument }) {
             onMouseLeave={showDelete.bind(this, 2)}
           >
             <span>{track.fileName}</span>
-            <audio controls loop className="soundbar" id={`soundbar-${i}`}>
+            <audio
+              ref={pass}
+              controls
+              loop
+              className="soundbar"
+              id={`soundbar-${i}`}
+              src={track.instrument}
+            >
               <source src={track.instrument} />
             </audio>
             <br></br>

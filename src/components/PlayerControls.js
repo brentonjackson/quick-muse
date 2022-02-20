@@ -1,15 +1,9 @@
-import { useState } from "react";
-
-function PlayerControls() {
-  function playAudio() {
-    return 0;
-  }
-  const [isPaused, setIsPaused] = useState(true);
+function PlayerControls({ play1, pause1, isLoaded, isPaused }) {
   return (
     <div id="player-control-wrapper">
       <div id="player-controls">
         <button id="rewind-button">Rewind</button>
-        <button id="play-button" onClick={playAudio}>
+        <button id="play-button" onClick={isPaused ? play1 : pause1}>
           {isPaused ? "Play" : "Pause"}
         </button>
         <button id="fast-forward-button">Fast Forward</button>
