@@ -1,16 +1,23 @@
-import { useState } from "react";
-
-function PlayerControls() {
-  function playAudio() {
-    return 0;
+function PlayerControls({ isLoaded, isPaused, setIsPaused, selectedTrack }) {
+  function play() {
+    if (!document.querySelector(".soundbar")) {
+      return;
+    }
+    let element = document.querySelector(`#soundbar-${selectedTrack}`);
+    element.paused ? element.play() : element.pause();
+    setIsPaused(element.paused);
   }
-  const [isPaused, setIsPaused] = useState(true);
+
   return (
     <div id="player-control-wrapper">
       <div id="player-controls">
         <button id="rewind-button">Rewind</button>
-        <button id="play-button" onClick={playAudio}>
-          {isPaused ? "Play" : "Pause"}
+        <button id="play-button" onClick={selectedTrack != null ? play : null}>
+          {document.querySelector(`#soundbar-${selectedTrack}`)
+            ? document.querySelector(`#soundbar-${selectedTrack}`).paused
+              ? "Play"
+              : "Pause"
+            : "Play"}
         </button>
         <button id="fast-forward-button">Fast Forward</button>
       </div>
