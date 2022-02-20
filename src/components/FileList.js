@@ -5,14 +5,10 @@ function FileList({ files, removeInstrument }) {
         return index !== i;
       })
     );
-    console.log(files[i]);
-    console.log(files);
-    // delete e.targ
   }
   return (
     <div id="file-list">
       {files.map((track, i) => {
-        console.log(files);
         return (
           <div
             className="instrument-track"

@@ -7,7 +7,6 @@ function FilePane() {
   function fileSelectHandler(e) {
     let files = e.target.files;
     let fileArr = Array.from(files);
-    console.log(fileArr);
     for (let i = 0; i < fileArr.length; i++) {
       // Only process image files.
       if (!fileArr[i].type.match("audio.*")) {
