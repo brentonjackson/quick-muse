@@ -44,9 +44,7 @@ function FilePane({ setIsLoaded, setSelected, selected }) {
       <button id="import-button">
         <label htmlFor="files">Import File</label>
       </button>
-      Files
-      <br></br>
-      <br></br>
+      <span id="files-header">Files</span>
       <FileList
         files={instrumentList}
         removeInstrument={setInstrumentList}
