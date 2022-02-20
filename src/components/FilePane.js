@@ -1,7 +1,7 @@
 import FileList from "./FileList";
 import { useState } from "react";
 
-function FilePane({ setIsLoaded, pass }) {
+function FilePane({ setIsLoaded, setSelected, selected }) {
   const [instrumentList, setInstrumentList] = useState([]);
 
   function fileSelectHandler(e) {
@@ -50,7 +50,8 @@ function FilePane({ setIsLoaded, pass }) {
       <FileList
         files={instrumentList}
         removeInstrument={setInstrumentList}
-        pass={pass}
+        setSelected={setSelected}
+        selected={selected}
       />
     </div>
   );
