@@ -43,7 +43,11 @@ function FileList({
       {files.map((track, i) => {
         return (
           <div
-            className="instrument-track"
+            className={
+              selected === i
+                ? "instrument-track instrument-track-highlighted"
+                : "instrument-track"
+            }
             id={`instrument-track-${i}`}
             key={i}
             onMouseEnter={showDelete.bind(this, 1, i)}
