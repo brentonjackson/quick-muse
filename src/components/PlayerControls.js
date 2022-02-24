@@ -1,29 +1,34 @@
-function PlayerControls({ isLoaded, isPaused, setIsPaused, selectedTrack }) {
+function PlayerControls({ isLoaded, selectedTrack, isPaused, setPause }) {
   function play() {
     if (!document.querySelector(".soundbar")) {
       return;
     }
     let element = document.querySelector(`#soundbar-${selectedTrack}`);
-    element.paused ? element.play() : element.pause();
-    setIsPaused(element.paused);
+    if (element.paused) {
+      setPause((prev) => {
+        return false;
+      });
+      element.play();
+    } else {
+      setPause((prev) => {
+        return true;
+      });
+      element.pause();
+    }
   }
 
   return (
     <div id="player-control-wrapper">
-      <div id="player-controls">
-        <span id="rewind-button"></span>
-        <span
-          id={
-            document.querySelector(`#soundbar-${selectedTrack}`)
-              ? document.querySelector(`#soundbar-${selectedTrack}`).paused
-                ? "play-button"
-                : "pause-button"
-              : "play-button"
-          }
-          onClick={selectedTrack != null ? play : null}
-        ></span>
-        <span id="fast-forward-button"></span>
-      </div>
+      {isLoaded && (
+        <div id="player-controls">
+          <span id="rewind-button"></span>
+          <span
+            id={isPaused ? "play-button" : "pause-button"}
+            onClick={play}
+          ></span>
+          <span id="fast-forward-button"></span>
+        </div>
+      )}
     </div>
   );
 }
