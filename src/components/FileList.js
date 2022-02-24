@@ -32,13 +32,9 @@ function FileList({
     trackSelectionHandler(listIndex);
     let selectedElement = document.querySelector(`#soundbar-${listIndex}`);
     if (selectedElement.paused) {
-      setPause((prev) => {
-        return true;
-      });
+      setPause(true);
     } else {
-      setPause((prev) => {
-        return false;
-      });
+      setPause(false);
     }
   }
 

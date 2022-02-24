@@ -5,14 +5,10 @@ function PlayerControls({ isLoaded, selectedTrack, isPaused, setPause }) {
     }
     let element = document.querySelector(`#soundbar-${selectedTrack}`);
     if (element.paused) {
-      setPause((prev) => {
-        return false;
-      });
+      setPause(false);
       element.play();
     } else {
-      setPause((prev) => {
-        return true;
-      });
+      setPause(true);
       element.pause();
     }
   }
