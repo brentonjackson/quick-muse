@@ -148,6 +148,13 @@ body {
   padding: 10px;
   z-index: 9999999999;
 }
+#import-button:hover {
+  background-color: #7546e0;
+  color: white;
+  margin: 10px;
+  box-shadow: 0px 0px 10px 0px;
+  padding: 10px;
+}
 
 #files-header {
   text-decoration: underline;
