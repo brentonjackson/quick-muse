@@ -32,7 +32,7 @@ body {
   right: 0;
   top: 0;
   height: 80%;
-  width: 80%;
+  width: 74%;
   z-index: 999;
 }
 
@@ -123,7 +123,7 @@ body {
   background: -moz-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
   background: linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
   height: calc(100vh - 15vh);
-  width: 230px;
+  width: 20%;
   position: fixed;
   top: 0;
   left: 0;
