@@ -181,7 +181,8 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.instrument-track-highlighted {
+.instrument-track-highlighted,
+.instrument-track:hover {
   background-color: #7546e0;
   border-radius: 5px;
   color: white;
