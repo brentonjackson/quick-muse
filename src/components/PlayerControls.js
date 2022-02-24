@@ -33,7 +33,11 @@ function PlayerControls({ isLoaded, selectedTrack, isPaused, setPause }) {
       setPause(true);
       element.pause();
     } else {
-      element.currentTime += 5;
+      if (element.currentTime == 0 && isPaused) {
+        return;
+      } else {
+        element.currentTime += 5;
+      }
     }
   }
 
