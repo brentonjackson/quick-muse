@@ -176,9 +176,16 @@ body {
 
 .instrument-track {
   padding: 5px 0;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.instrument-track-highlighted,
+.instrument-track:hover {
+  background-color: #7546e0;
+  border-radius: 5px;
+  color: white;
 }
 
 #delete-button {
