@@ -53,7 +53,6 @@ function FileList({
             <span>{track.fileName}</span>
             <audio
               controls
-              loop
               className="soundbar"
               id={`soundbar-${i}`}
               src={track.instrument}
