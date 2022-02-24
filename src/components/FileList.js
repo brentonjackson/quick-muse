@@ -1,6 +1,13 @@
 import { useState } from "react";
 
-function FileList({ files, removeInstrument, setSelected, selected }) {
+function FileList({
+  files,
+  removeInstrument,
+  selected,
+  trackSelectionHandler,
+  isPaused,
+  setPause,
+}) {
   const [isDeleteActive, setIsDeleteActive] = useState(false);
   const [deleteKey, setDeleteKey] = useState(null);
 
@@ -21,6 +28,20 @@ function FileList({ files, removeInstrument, setSelected, selected }) {
     }
   }
 
+  function selectionHandler(listIndex) {
+    trackSelectionHandler(listIndex);
+    let selectedElement = document.querySelector(`#soundbar-${listIndex}`);
+    if (selectedElement.paused) {
+      setPause((prev) => {
+        return true;
+      });
+    } else {
+      setPause((prev) => {
+        return false;
+      });
+    }
+  }
+
   return (
     <div id="file-list">
       {files.map((track, i) => {
@@ -31,7 +52,7 @@ function FileList({ files, removeInstrument, setSelected, selected }) {
             key={i}
             onMouseEnter={showDelete.bind(this, 1, i)}
             onMouseLeave={showDelete.bind(this, 2)}
-            onClick={setSelected.bind(this, i)}
+            onClick={selectionHandler.bind(this, i)}
           >
             <span>{track.fileName}</span>
             <audio
