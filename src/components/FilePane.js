@@ -47,10 +47,6 @@ function FilePane({
         className="hidden"
         onChange={fileSelectHandler}
       />
-      <button id="import-button">
-        <label htmlFor="files">Import File</label>
-      </button>
-      <span id="files-header">Files</span>
       <FileList
         files={instrumentList}
         removeInstrument={setInstrumentList}
