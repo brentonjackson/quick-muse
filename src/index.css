@@ -225,7 +225,7 @@ button {
     height: 15%;
     width: 100%;
     position: absolute;
-    bottom: 20px;
+    bottom: 2vh;
     top: unset;
     left: unset;
     margin: 0;
