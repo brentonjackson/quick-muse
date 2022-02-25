@@ -72,6 +72,9 @@ function FileList({
           </div>
         );
       })}
+      <button id="import-button">
+        <label htmlFor="files">Import File</label>
+      </button>
     </div>
   );
 }
