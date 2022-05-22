@@ -12,6 +12,10 @@ function FileList({
   const [deleteKey, setDeleteKey] = useState(null);
 
   function removeTrack(i) {
+    let selectedElement = document.querySelector(`#soundbar-${i}`);
+    selectedElement.pause();
+    selectedElement.removeAttribute("src");
+    selectedElement.load();
     removeInstrument((prevFiles) =>
       prevFiles.filter((val, index) => {
         return index !== i;
