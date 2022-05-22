@@ -165,6 +165,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+#file-list::-webkit-scrollbar {
+  width: 1em;
+}
 #file-list::-webkit-scrollbar-corner {
   background: rgba(0, 0, 0, 0);
 }
