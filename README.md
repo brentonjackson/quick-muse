@@ -2,12 +2,16 @@
 
 [Latest build link](https://tender-hypatia-795b09.netlify.app/)
 
-Music player built during UGAHacks 2022 that plays loaded audio files in the browser
-Initially, the goal was to make an online digital audio workstation app that allowed users to edit and create tracks online. During the day or so of working on it, we were able to upload and play different tracks, but a lot is left to be done.
+Music player built during UGAHacks 2022 that plays loaded audio files in the browser.
+
+Initially, the goal was to make an online digital audio workstation app that allowed users to edit and create tracks online.
+
+During the day or so of working on it, we were able to upload and play different tracks, but a lot is left to be done.
 
 
 ## Tools
 This is a React app that uses native HTML5 functionality for audio control
+
 You only need npm and node.js installed to get started.
 
 
