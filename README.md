@@ -8,12 +8,13 @@ Initially, the goal was to make an online digital audio workstation app that all
 
 ## Tools
 This is a React app that uses native HTML5 functionality for audio control
+You only need npm and node.js installed to get started.
 
 
 ## Getting Started
 1. Fork this repo.
-2. Run `npm install` in terminal
-3. Run `npm run start` in terminal and navigate to localhost:3000
+2. Run `npm install` in terminal to install dependencies
+3. Run `npm run start` in terminal and navigate to localhost:3000 in browser
 
 
 ## Future Work
