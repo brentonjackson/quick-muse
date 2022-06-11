@@ -1,3 +1,5 @@
+![pic](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/challenge_photos/001/837/872/datas/full_width.jpg)
+
 # quick-muse
 
 [Latest build link](https://tender-hypatia-795b09.netlify.app/)
@@ -25,3 +27,9 @@ You only need npm and node.js installed to get started.
 I'd love to expand on this to make it more useful and open to diverging in several directions, most notably by converting it to a DJ app where a user and collaborators can add music from online sources, not only from local ones.
 
 We are also very open to and love reading issues to improve any part of the app, as there is much room for improvement :).
+
+
+## Credits
+Quick-Muse was written by Brenton Jackson and Nicholus Jackson
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
