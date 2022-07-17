@@ -30,6 +30,4 @@ We are also very open to and love reading issues to improve any part of the app,
 
 
 ## Credits
-Quick-Muse was written by Brenton Jackson and Nicholus Jackson
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+Quick-Muse was created by **Brenton Jackson** and **Nicholus Jackson**
