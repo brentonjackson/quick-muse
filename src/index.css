@@ -196,6 +196,13 @@ body {
   color: white;
 }
 
+.instrument-track span {
+  overflow-wrap: break-word;
+  word-break: break-all;
+  width: 90%;
+  overflow-x: hidden;
+}
+
 #delete-button {
   display: hidden;
   width: 25%;
@@ -266,12 +273,7 @@ button {
     width: 100px;
     border: hsla(265, 84%, 48%, 1) solid;
   }
-  .instrument-track span {
-    overflow-wrap: break-word;
-    word-break: break-all;
-    width: 100%;
-    overflow-x: hidden;
-  }
+
   .instrument-track #delete-button {
     display: unset;
     height: 30px;
