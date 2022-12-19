@@ -1,5 +1,12 @@
 function MusicCanvas({ selectedTrack }) {
-  return <div id="music-canvas"></div>;
+  return (
+    <canvas
+      class="visualizer"
+      id="music-canvas"
+      width="640"
+      height="100"
+    ></canvas>
+  );
 }
 
 export default MusicCanvas;

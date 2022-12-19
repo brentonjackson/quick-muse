@@ -258,7 +258,7 @@ button {
     /* asdfasdf */
     line-height: 2.5em;
     height: 5em;
-    /* overflow: hidden; */
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow-wrap: break-word;
